@@ -1,15 +1,46 @@
-<h1>Rock Paper Scissors</h1>
+<div class="container">
 
-<input #iname type="text">
-<button (click)="getResult(iname)">Send</button>
-<br>
-<br>
-<button id="rock" (click)="getResult2($event)">Rock</button>
-<button id="paper" (click)="getResult2($event)">Paper</button>
-<button id="scissors" (click)="getResult2($event)">Scissors</button>
+    <h1>Rock Paper Scissors</h1>
+    
+    <!--input #iname type="text">
+    <button (click)="getResult(iname)">Send</button>
+    <br>
+    <br-->
+
+    <div class="buttons">
+        <button id="rock" (click)="getResult2($event)">Rock</button>
+        <button id="paper" (click)="getResult2($event)">Paper</button>
+        <button id="scissors" (click)="getResult2($event)">Scissors</button>
+    </div>
+
+    <div *ngIf="result != '' " class="result-div">
+        <div *ngIf="!isWinner && !isLooser" class="ongoing">
+            <div class="result">
+                <p>Your answer: {{playerAnswer}}</p>
+                <p>Computer answer: {{computerAnswer}}</p>
+                <p>{{result}} 
+                    <span *ngIf="result == 'Drow'">😎</span>
+                    <span *ngIf="result == 'You Win!'">🎉</span>
+                    <span *ngIf="result == 'You Loose!'">🤔</span>
+                </p>
+            </div>
+            <div class="score">
+                <p>Score:</p>
+                <div class="scores">
+                    <p>You: {{playerScore}} </p>
+                    <p>Comp: {{compScore}} </p>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="isWinner || isLooser" class="end">
+            <div class="final-result">
+                <h2 *ngIf="isWinner">You Won !!! 🎉</h2>
+                <h2 *ngIf="isLooser">You Lost !!! 🤦‍♀️</h2>
+                <button (click)="rePlay()">Replay</button>
+            </div>
+        </div>
+    </div>
 
 
-<h2>Your answer: {{playerAnswer}}</h2>
-<h2>Computer: {{computerAnswer}}</h2>
-
-<h2>{{result}}</h2>
+    
+</div>
