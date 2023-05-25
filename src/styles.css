@@ -14,6 +14,7 @@ body {
     align-items: center;
     text-align: center;
     background: linear-gradient(#dc9ae2, #d142a6, #df96b8);
+    font-size: .8rem;
 }
 
 app-root {
@@ -23,7 +24,7 @@ app-root {
 .container {
     width: 90%;
     margin-inline: auto;
-    max-width: 500px;
+    max-width: 700px;
     padding: 3rem 1rem;
     color: #e6bcd9;
     box-shadow: 1px 1px 3px #cccccc3d;
@@ -38,19 +39,22 @@ app-root {
 }
 
 .buttons {
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 button {
     background: transparent;
     color: #e6bcd9;
-    width: 25%;
+    width: 60%;
     min-width: 90px;
-    padding: .4rem;
+    padding: .4rem 1rem;
     border-radius: 50px;
     border: none;
     outline: none;
-    
     box-shadow: 1px 1px 6px #cccccc9a;
     cursor: pointer;
 }
@@ -61,7 +65,7 @@ button {
 
 p {
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1.3em;
 }
 
 .scores {
@@ -81,4 +85,32 @@ p {
 
 .final-result button {
     margin-top: 1rem;
+}
+
+h2 {
+    font-size: 2.4em;
+}
+
+@media screen and (min-width: 380px){
+    body {
+        font-size: 1.1rem;
+    }
+    .buttons {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    button {
+        font-size: 1.2rem;
+        padding: .8rem 1rem;
+        width: 25%;
+    }
+}
+@media screen and (min-width: 700px){
+    body {
+        font-size: 1.5rem;
+    }
+    button {
+        font-size: 1.5rem;
+        padding: .5rem 2rem;
+    }
 }
