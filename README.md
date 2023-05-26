@@ -12,5 +12,5 @@ Links
 https://priskinzsuzsanna.github.io/angular-rock-paper-scissors/
 
 Screenshot
-![png4](https://github.com/PriskinZsuzsanna/angular-three-column-card-frontend-mentor/assets/121173949/8377ef70-23a0-4649-a82d-fbca78d364f9)
+![pngx](https://github.com/PriskinZsuzsanna/angular-car-catalog/assets/121173949/6f8f9948-871b-40f8-93b7-bde6c9bef92d)
 
