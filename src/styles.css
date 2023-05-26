@@ -1,9 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Wellfleet&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family:monospace;
+    font-family: 'Wellfleet', cursive;
 }
 
 body {
@@ -14,7 +16,9 @@ body {
     align-items: center;
     text-align: center;
     background: linear-gradient(#dc9ae2, #d142a6, #df96b8);
-    font-size: .8rem;
+    background: rgb(45,18,119);
+    background: radial-gradient(circle, rgba(45, 18, 119, 0.721) 0%, rgba(21, 24, 219, 0.658) 35%, rgba(192, 17, 227, 0.653) 100%);
+    font-size: .7rem;
 }
 
 app-root {
@@ -27,6 +31,7 @@ app-root {
     max-width: 700px;
     padding: 3rem 1rem;
     color: #e6bcd9;
+    color: #fff;
     box-shadow: 1px 1px 3px #cccccc3d;
     display: flex;
     flex-direction: column;
@@ -34,6 +39,7 @@ app-root {
     justify-content: center;
     gap: 1.3rem;
     background: #cccccc2a;
+    background: #fdfdfd23;
     backdrop-filter: blur(120px);
     border-radius: 2rem;
 }
@@ -49,14 +55,31 @@ app-root {
 button {
     background: transparent;
     color: #e6bcd9;
+    color: #fff;
     width: 60%;
     min-width: 90px;
-    padding: .4rem 1rem;
+    padding: .7rem 1rem;
     border-radius: 50px;
     border: none;
     outline: none;
     box-shadow: 1px 1px 6px #cccccc9a;
     cursor: pointer;
+    position: relative;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    background: radial-gradient(circle, rgba(45, 18, 119, 0.281) 0%, rgba(21, 24, 219, 0.303) 35%, rgba(192, 17, 227, 0.206) 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+button:hover::after {
+    opacity: 1;
 }
 
 .result-div  div.result{
@@ -83,9 +106,14 @@ p {
     border-radius: 50%;
 }
 
+.final-result {
+    margin-top: 2rem;
+}
+
+
 .final-result button {
-    margin-top: 1rem;
-    min-width: 120px
+    margin-top: 2rem;
+    min-width: 140px
 }
 
 h2 {
@@ -94,24 +122,24 @@ h2 {
 
 @media screen and (min-width: 380px){
     body {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .buttons {
         flex-direction: row;
         gap: 2rem;
     }
     button {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: .8rem 1rem;
         width: 25%;
     }
 }
 @media screen and (min-width: 700px){
     body {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     button {
-        font-size: 1.5rem;
-        padding: .5rem 2rem;
+        font-size: 1.3rem;
+        padding: .8rem 2rem;
     }
 }
